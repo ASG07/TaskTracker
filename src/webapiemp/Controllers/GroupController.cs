@@ -20,6 +20,13 @@ public class GroupController : ControllerBase
         _authServices = authServices;
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAllGroups()
+    {
+        var groups = await _context.Groups.ToListAsync();
+        return Ok(groups);
+    }
+
 
     [HttpPost]
     [Authorize]

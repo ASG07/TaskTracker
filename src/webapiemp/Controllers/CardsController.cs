@@ -263,4 +263,10 @@ public class CardsController : ControllerBase
         return Ok();
     }
 
+    [HttpGet("test")]
+    public async Task<IActionResult> test()
+    {
+        return Ok("test was successful!");
+    }
+
 }
